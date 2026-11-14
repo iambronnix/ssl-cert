@@ -78,7 +78,7 @@ func generateCertficate()(tls.Certificate, error){
 		PrivateKey: priv,
 	}
 
-	//Save the new certificate to disk
+	//Save the new certificate into disk
 
 	err = os.WriteFile("server.crt", cert.Certificate[0],0644)
 	if err != nil{
